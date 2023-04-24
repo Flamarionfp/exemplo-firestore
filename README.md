@@ -1,12 +1,10 @@
-# NODE SOLID BOILERPLATE
+# Firestore Example
 
-Author: [Flamarion Fagundes Pinto](https://www.linkedin.com/in/flamarion-fagundes-pinto-0b037b210/)
+Implements a basic firestore implementation
 
-See on Github: [Node Solid Boilerplate](https://github.com/Flamarionfp/node-solid-boilerplate)
+### Authors:
 
-NODE SOLID BOILERPLATE using TYPESCRIPT.
-
-This template includes eslint, prettier, husky, jest and dotenv with an opinative architecture based on SOLID principle.
+Flamarion, Francine Eduardo e Diógenes
 
 ## Scripts
 
