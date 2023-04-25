@@ -1,22 +1,15 @@
-import { app, initializeApp } from 'firebase-admin';
-
+import * as admin from 'firebase-admin';
+const serviceAccount = require('../../serviceAccountKey.json');
 export class Firebase {
-  private app: app.App;
+  private app: admin.app.App;
 
   constructor() {
-    const firebaseConfig = {
-      apiKey: process.env.API_KEY,
-      authDomain: process.env.AUTH_DOMAIN,
-      projectId: process.env.PROJECT_ID,
-      storageBucket: process.env.STORAGE_BUCKET,
-      messagingSenderId: process.env.MESSAGING_SENDERID,
-      appId: process.env.APP_ID,
-    };
-
-    this.app = initializeApp(firebaseConfig);
+    this.app = admin.initializeApp({
+      credential: admin.credential.cert(serviceAccount),
+    });
   }
 
-  public getApp(): app.App {
+  public getApp(): admin.app.App {
     return this.app;
   }
 

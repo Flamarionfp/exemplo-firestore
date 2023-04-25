@@ -19,7 +19,7 @@ yarn dev
 yarn build
 
 # analyze code
-yarn lint
+yarn eslint
 
 # run tests
 yarn test

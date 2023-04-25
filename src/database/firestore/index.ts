@@ -1,4 +1,4 @@
-import { Firebase } from '../config/firebase';
+import { Firebase } from '../../config/firebase';
 
 export class FirestoreDatabase {
   private instance: FirebaseFirestore.Firestore;
