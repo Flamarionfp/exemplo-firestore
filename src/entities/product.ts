@@ -7,6 +7,10 @@ export class Product {
     this.props = productData;
   }
 
+  get id(): string {
+    return this.props.id;
+  }
+
   get name(): string {
     return this.props.name;
   }

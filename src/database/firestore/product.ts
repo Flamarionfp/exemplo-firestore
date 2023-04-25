@@ -5,6 +5,7 @@ import { firestoreDB } from '.';
 export class FirestoreProductRepository implements ProductRepository {
   create = async (product: Product): Promise<void> => {
     await firestoreDB.collection('products').add({
+      id: product.id,
       name: product.name,
       price: product.price,
       description: product.description,
