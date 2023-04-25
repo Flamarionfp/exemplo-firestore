@@ -25,4 +25,19 @@ export class FirestoreProductRepository implements ProductRepository {
 
     return products;
   };
+
+  delete = async (id: string): Promise<void> => {
+    const productQuery = firestoreDB
+      .collection('products')
+      .where('id', '==', id);
+    const productSnapshot = await productQuery.get();
+
+    const { empty, docs } = productSnapshot;
+    if (empty) {
+      throw new Error('Product not found');
+    }
+
+    const [productDoc] = docs;
+    await productDoc.ref.delete();
+  };
 }

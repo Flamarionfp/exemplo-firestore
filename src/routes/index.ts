@@ -1,4 +1,8 @@
-import { createProductController, getProductsController } from '@/controllers';
+import {
+  createProductController,
+  deleteProductController,
+  getProductsController,
+} from '@/controllers';
 import { Router } from 'express';
 
 const router = Router();
@@ -9,5 +13,6 @@ router.get('/', (req, res) => {
 
 router.post('/product', createProductController.handle);
 router.get('/product', getProductsController.handle);
+router.delete('/product/:id', deleteProductController.handle);
 
 export default router;
