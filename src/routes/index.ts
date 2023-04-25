@@ -1,4 +1,4 @@
-import { createProductController } from '@/controllers';
+import { createProductController, getProductsController } from '@/controllers';
 import { Router } from 'express';
 
 const router = Router();
@@ -8,5 +8,6 @@ router.get('/', (req, res) => {
 });
 
 router.post('/product', createProductController.handle);
+router.get('/product', getProductsController.handle);
 
 export default router;

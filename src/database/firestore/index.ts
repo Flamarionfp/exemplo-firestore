@@ -1,15 +1,4 @@
-import { Firebase } from '../../config/firebase';
+import admin from '../../config/firebase';
+const firestoreDB = admin.firestore();
 
-export class FirestoreDatabase {
-  private instance: FirebaseFirestore.Firestore;
-
-  constructor() {
-    const firebase = new Firebase();
-
-    this.instance = firebase.getFirestore();
-  }
-
-  getInstance(): FirebaseFirestore.Firestore {
-    return this.instance;
-  }
-}
+export { firestoreDB };
